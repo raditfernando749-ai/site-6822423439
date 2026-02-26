@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Demon | Cyber Architect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --primary:#00f0ff;
+    --bg:#0a0a0a;
+    --card:#111111;
+    --text:#ffffff;
+    --dim:#9ca3af;
+    --border:rgba(0,240,255,0.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Sora',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+    z-index:1000;
+}
+
+.logo{
+    font-weight:800;
+    font-size:1.4rem;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dim);
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    gap:50px;
+    background:radial-gradient(circle at 20% 30%, rgba(0,240,255,0.05), transparent 60%);
+}
+
+.hero-text h1{
+    font-size:4.5rem;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero-text h1 span{
+    color:var(--primary);
+}
+
+.hero-text p{
+    color:var(--dim);
+    max-width:500px;
+    margin-bottom:35px;
+}
+
+.btn{
+    padding:14px 30px;
+    background:var(--primary);
+    color:#000;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    box-shadow:0 0 30px rgba(0,240,255,0.4);
+    transform:scale(1.05);
+}
+
+.hero-img{
+    width:380px;
+    height:450px;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+
+.hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* SECTION */
+
+.section{
+    padding:120px 8%;
+}
+
+.section-title{
+    font-size:2.8rem;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:var(--primary);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:var(--card);
+    padding:40px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+}
+
+.card i{
+    font-size:2.2rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--dim);
+    font-size:0.9rem;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:var(--card);
+    padding:60px;
+    border-radius:30px;
+    border:1px solid var(--border);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-box h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    color:var(--dim);
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    background:#1a1a1a;
+    border:1px solid #222;
+    padding:15px;
+    border-radius:10px;
+    color:#fff;
+}
+
+input:focus,textarea:focus{
+    border-color:var(--primary);
+    outline:none;
+}
+
+button{
+    background:var(--primary);
+    border:none;
+    padding:15px;
+    font-weight:700;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:60px;
+    border-top:1px solid var(--border);
+    margin-top:60px;
+    color:var(--dim);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+    }
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">BLACK <span>DEMON</span></div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Expertise</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Cyber <span>Security</span><br> & Full Stack Architect</h1>
+<p>I build secure systems, scalable web platforms, and high-performance mobile applications. Ethical hacking meets elite development.</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+
+<div class="hero-img">
+<img src="https://k.top4top.io/p_37093v7gi1.jpeg" alt="Cyber Security">
+</div>
+</section>
+
+<section class="section" id="services">
+<h2 class="section-title">My <span>Expertise</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-shield-halved"></i>
+<h3>Ethical Hacking</h3>
+<p>Advanced penetration testing, vulnerability assessment, and system hardening against modern cyber threats.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-code"></i>
+<h3>Web Development</h3>
+<p>Full-stack websites built with modern technologies optimized for speed, SEO, and scalability.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-mobile-screen"></i>
+<h3>Mobile Applications</h3>
+<p>High-performance Android & iOS apps built with Flutter, Kotlin, and Swift.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-bug"></i>
+<h3>Bug Bounty & Security Research</h3>
+<p>Finding and exploiting vulnerabilities ethically to secure enterprise-level systems.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="contact">
+<div class="contact-box">
+
+<div>
+<h2>Let's Work Together</h2>
+<p>If you need secure architecture, professional development, or penetration testing — send me a message and I’ll respond shortly.</p>
+<p style="margin-top:20px;">Or contact me directly on WhatsApp</p>
+</div>
+
+<form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+    <button type="submit" id="submitBtn">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+©️ 2015 Black Demon — Cyber Architect. All Rights Reserved.
+</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const button = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    if(name === "" || email === "" || message === ""){
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Loading effect
+    button.innerText = "Sending...";
+    button.disabled = true;
+
+    let phoneNumber = "+201050097547"; // ضع رقمك هنا
+
+    let whatsappMessage =
+        "🔥 New Project Request 🔥%0A%0A" +
+        "👤 Name: " + encodeURIComponent(name) + "%0A" +
+        "📧 Email: " + encodeURIComponent(email) + "%0A%0A" +
+        "💬 Message:%0A" + encodeURIComponent(message);
+
+    let url = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+    setTimeout(() => {
+        window.open(url, "_blank");
+
+        form.reset();
+        button.innerText = "Send Message";
+        button.disabled = false;
+    }, 800);
+});
+</script>
+
+</body>
+</html>
